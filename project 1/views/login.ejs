@@ -1,0 +1,34 @@
+
+    <%- include('partials/header') %>
+
+
+    <div class = "bg-container">
+    <div class="wrapper">
+        <h1>Welcome!!</h1>
+        <p>Get detailed and accurate information about various exams through our AI-powered service.</p>
+        <form action="/" method="POST">
+            <input type="text" placeholder="Enter username" name="username" required>
+            <input type="password" placeholder="Password" name="password" required>
+            <button type="submit">Sign in</button>
+        </form>
+        <p class="or">----- or continue with -----</p>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <a class="btn btn-block" href="/auth/google" role="button">
+                <i class="fab fa-google"></i>
+                Sign In with Google
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="not-member">
+            Not a member? <a href="/register" role="button">Register Now</a>
+            <p>&copy; 2024 BitsatGPT. All rights reserved.</p>
+        </div>
+    </div>
+  </div>
+      
+
+    <%- include('partials/footer') %>
+
