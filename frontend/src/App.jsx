@@ -33,7 +33,15 @@ function App() {
   return (
     <div className="h-screen w-screen flex overflow-hidden">
       {/* Left section */}
+
       <div className="h-full w-6/12 p-4 flex flex-col bg-gray-900">
+        <div className="p-4 flex flex-col justify-center items-center bg-gray-900 shadow-md rounded-b-lg">
+  <h1 className="text-amber-50 text-3xl font-bold tracking-wide">
+    Code Genie
+  </h1>
+  <p className="text-amber-50 tracking-wide"> Your Best AI Code Reviewer</p>
+</div>
+
         <Editor
           value={code}
           onValueChange={(code) => setCode(code)}
@@ -75,19 +83,18 @@ function App() {
           <p className="text-gray-700 font-semibold">Fetching review...</p>
         ) : (
           <Markdown
-  rehypePlugins={[rehypehighlight]}
-  remarkPlugins={[remarkGfm]}
- style={{
-    fontFamily: "'Fira Code', monospace",
-    fontSize: 14,
-    color: "#c9d1d9",
-    lineHeight: "3",
-    whiteSpace: "pre-wrap",
-  }}
->
-  {review}
-</Markdown>
-
+            rehypePlugins={[rehypehighlight]}
+            remarkPlugins={[remarkGfm]}
+            style={{
+              fontFamily: "'Fira Code', monospace",
+              fontSize: 14,
+              color: "#c9d1d9",
+              lineHeight: "3",
+              whiteSpace: "pre-wrap",
+            }}
+          >
+            {review}
+          </Markdown>
         )}
       </div>
     </div>

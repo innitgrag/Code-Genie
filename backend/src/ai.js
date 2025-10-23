@@ -36,7 +36,6 @@ ${prompt}
 ,
   });
 
-  console.log(response.text);
   return response.text;
 }
 
